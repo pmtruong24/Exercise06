@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    public class Account
+    public class Program
     {
-        private int i;
-        public Account(int money)
+        static void Main(string[] args)
         {
-            i = money;
-        }
-        public void Deposit(int money)
-        {
-            i += money;
-        }
-        public void Withdraw(int money)
-        {
-            i -= money;
-        }
-        public int Balance()
-        {
-            return i;
+            Console.WriteLine("money bank");
+            int money = int.Parse(Console.ReadLine());
+            int c, d;
+            Console.WriteLine("money with");
+            int with = int.Parse(Console.ReadLine());
+            c = money - with;
+            Console.WriteLine("Balance " + money + "-" + with + "=" + c);
+            Console.WriteLine("money bank " + c);
+            Console.WriteLine("money Depo ");
+            int Depo = int.Parse(Console.ReadLine());
+            d = c + Depo;
+            Console.WriteLine("Balance " + c + "+" + Depo + "=" + d);
         }
 
     }
